@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM httpd:2.4
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -11,6 +11,6 @@ RUN date > /var/www/html/buildtime.txt
 
 WORKDIR /var/www/html/
 
-EXPOSE 81
+EXPOSE 80
 
 CMD service apache2 start && bash
